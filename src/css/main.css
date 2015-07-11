@@ -145,10 +145,21 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.topic {
+    list-style: none;
+    border-bottom: 3px solid #c6c6c6;
+    margin-bottom: 16px;
+}
 
+.topic > .header {
+    padding: 5px;
+    margin-bottom: 10px;
+}
 
-
-
+.topic > .header > .response-count {
+    font-size: 0.8rem;
+    color: #c9c9c9;
+}
 
 
 

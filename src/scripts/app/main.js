@@ -5,8 +5,7 @@ define(function (require) {
     var firebaseRef = firebaseModule.getData();
 
     firebaseRef.on('value', function(snapshot) {
-      console.log(snapshot.val());
+      var topicModule = require('./topic');
+      topicModule.render(snapshot.val().topics);
     });
-
-    //TODO - firebase error
 });
