@@ -1,7 +1,16 @@
-<div class="response">
+<div class="response" data-depth="<%- depth %>">
   <div class="header">
     <span class="author"><%- author %></span>
     <span class="age"><%- age %></span>
   </div>
-  <div class="posttext"><%= posttext%></div>
+  <div class="posttext"><%= posttext %></div>
+  <div class="reply"><span class="reply-button">reply here</span></div>
+  <div class="input">
+    <textarea></textarea>
+    <div class="actions">
+      <button class="submit">Submit</button>
+      <button class="cancel">Cancel</button>
+    </div>
+  </div>
+
 </div>

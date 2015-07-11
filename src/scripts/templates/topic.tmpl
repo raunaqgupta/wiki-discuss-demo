@@ -1,7 +1,23 @@
 <li class="topic">
   <div class="header">
     <span class="topic-title"><%- topictitle %></span>
-    <div class="response-count"><%- responseCount %> comments</div>
+    <div class="meta">
+      created <span class="age"><%- age %></span> •
+      <span class="response-count"><%- responseCount %> comments</span>
+    </div>
   </div>
-  <div class="responses"></div>
+  <div class="content">
+    <div class="description">
+      <div class="meta">started by <span class="topic-author"><%- topicAuthor %></span></div>
+      <%= description %>
+    </div>
+  </div>
+  <div class="input">
+    <span class="topic-input">Reply to this topic</span>
+    <textarea></textarea>
+    <div class="actions">
+      <button class="submit">Submit</button>
+      <button class="cancel">Cancel</button>
+    </div>
+  </div>
 </li>

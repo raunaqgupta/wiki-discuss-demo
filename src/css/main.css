@@ -70,13 +70,16 @@ body {
    =================== */
 
 .header-container,
-.footer-container,
 .main aside {
-    background: #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.footer-container {
+    border-top: 1px solid #eee;
 }
 
 .title {
-    color: #999;
+    color: #27AA65;
 }
 
 /* ==============
@@ -145,21 +148,188 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.hide {
+    display: none;
+}
+
+#discussion-list {
+    padding: 0;
+}
+
 .topic {
     list-style: none;
     border-bottom: 3px solid #c6c6c6;
     margin-bottom: 16px;
+    padding-bottom: 10px;
+}
+
+.topic.collapsed > .content,
+.topic.collapsed > .input {
+    display: none;
 }
 
 .topic > .header {
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 0 5px;
 }
 
-.topic > .header > .response-count {
+.topic > .header:hover {
+    cursor: pointer;
+}
+
+.topic .meta {
     font-size: 0.8rem;
     color: #c9c9c9;
+    padding-left: 22px;
 }
+
+.content .meta {
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.content .topic-author {
+    font-weight: bold;
+    color: #747474;
+}
+
+.topic > .content {
+    padding: 0 5px 5px;
+}
+
+.topic > .content .description {
+    margin-left: 22px;
+}
+
+.description p {
+    margin: 0 30px 20px 0;
+}
+
+.topic-title {
+    font-weight: bold;
+    color: #565656;
+    font-size: 1.2rem;
+}
+
+.topic-title::before {
+    content: "\25BC";
+    color: #c9c9c9;
+    margin-right: 5px;
+    vertical-align: top;
+    font-size: 1rem;
+}
+
+.topic.collapsed .topic-title::before {
+    content: "\25BA";
+    color: #c9c9c9;
+    margin-right: 5px;
+    vertical-align: top;
+    font-size: 1rem;
+}
+
+.topic .input {
+    margin: 5px 20px;
+}
+
+.topic .input .topic-input {
+    color: #999;
+}
+
+/* response */
+
+.response {
+    border: 1px solid #eee;
+}
+
+.response > .header {
+    border-bottom: 1px solid #eee;
+    padding: 5px 10px;
+    background-color: #eee;
+}
+
+.response > .posttext {
+    padding: 10px;
+}
+
+.posttext > p {
+    margin: 5px 0;
+}
+
+.response > .header > .author {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #747474;
+}
+
+.response > .header > .age {
+    float: right;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.response .reply {
+    text-align: right;
+    padding: 0 10px;
+}
+
+.response .reply > .reply-button {
+    font-size: 0.8rem;
+    color: #0645AD;
+}
+
+.response .reply > .reply-button:hover {
+    cursor: pointer;
+}
+
+/* input */
+
+.input {
+    padding: 0 10px;
+    padding-bottom: 10px;
+}
+
+.response .input {
+    display: none;
+}
+
+.input.show {
+    display: block;
+}
+
+.input > textarea {
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border-color: #c9c9c9;
+    margin-top: 5px;
+}
+
+.input > .actions {
+    text-align: right;
+}
+
+button.submit {
+    background-color: #3366bb;
+    border: 1px solid #3366bb;
+    border-radius: 2px;
+    color: #fff;
+}
+
+button.submit:hover {
+    cursor: pointer;
+    background-color: #3366bb;
+}
+
+button.cancel {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #0645AD;   
+}
+
+
+
+
+
 
 
 

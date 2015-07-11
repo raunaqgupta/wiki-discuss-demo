@@ -12,6 +12,10 @@ requirejs.config({
 
       'vendor/underscore-min': {
         exports: '_'
+      },
+
+      'vendor/moment.min': {
+        exports: 'moment'
       }
     }
 });
