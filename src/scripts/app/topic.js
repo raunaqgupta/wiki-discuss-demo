@@ -1,4 +1,6 @@
-define(['vendor/jquery', 'vendor/underscore-min', 'text!templates/topic.tmpl'], function($, _, topicTmpl) {
+define(['vendor/jquery', 'vendor/underscore-min', 'app/response', 'text!templates/topic.tmpl'],
+  function($, _, response, topicTmpl) {
+  
   return {
     render: function(topics) {
       var discussionList = $('#discussion-list');
@@ -7,6 +9,10 @@ define(['vendor/jquery', 'vendor/underscore-min', 'text!templates/topic.tmpl'], 
       _.each(topics, function(topic) {
         topic.responseCount = topic.responses.length;
         var topicNode = $(compiledTopicTmpl(topic));
+
+        // add responses
+        response.render(topic.responses, topicNode);
+
         $(discussionList).append(topicNode);
       });
     }
